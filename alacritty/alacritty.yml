@@ -65,23 +65,23 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka
+    family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
 
   # Bold font face
   bold:
-    family: Iosevka 
+    family: Hack Nerd Font Mono 
     style: Bold
 
   # Italic font face
   italic:
-    family: Iosevka 
+    family: Hack Nerd Font Mono 
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Iosevka
+    family: Hack Nerd Font Mono
     style: Bold Italic
 
   # Point size
