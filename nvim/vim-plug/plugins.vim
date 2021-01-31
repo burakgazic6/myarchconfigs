@@ -26,4 +26,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dense-analysis/ale'
     "MARKDOWN PREWIEWER
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    "OTHER MARKDOWN PLUGS
+    " tabular plugin is used to format tables
+    Plug 'godlygeek/tabular'
+    " JSON front matter highlight plugin
+    Plug 'elzr/vim-json'
+    Plug 'plasticboy/vim-markdown'
+    "JS LINTING
+    Plug 'neomake/neomake', { 'on': 'Neomake' }
+    "DRACULA THEME
+    Plug 'dracula/vim'
+    
+
+
     call plug#end()
