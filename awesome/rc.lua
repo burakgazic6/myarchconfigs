@@ -579,4 +579,5 @@ awful.spawn.with_shell("picom")
 awful.spawn.with_shell("kmix")
 awful.spawn.with_shell("setxkbmap tr")
 awful.spawn.with_shell("xset led on")
+awful.spawn.with_shell("nitrogen --restore &")
 internet_browser = "firefox"

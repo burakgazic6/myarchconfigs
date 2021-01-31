@@ -16,6 +16,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     "LIGHTLINE
     Plug 'itchyny/lightline.vim'
+    "LIGTHLINE ALE
+    Plug 'maximbaz/lightline-ale'
     "GOYO
     Plug 'junegunn/goyo.vim',{ 'on': 'Goyo' }
     "NERDCOMMENTER
@@ -26,7 +28,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dense-analysis/ale'
     "MARKDOWN PREWIEWER
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-    "OTHER MARKDOWN PLUGS
     " tabular plugin is used to format tables
     Plug 'godlygeek/tabular'
     " JSON front matter highlight plugin
@@ -36,7 +37,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neomake/neomake', { 'on': 'Neomake' }
     "DRACULA THEME
     Plug 'dracula/vim'
-    
+    "NERDTREE GIT
+    Plug 'Xuyuanp/nerdtree-git-plugin' 
+    "PYTHON SYNTAX
+    Plug 'vim-python/python-syntax'
+    " Use release branch (recommend)
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Or build from source code by using yarn: https://yarnpkg.com
+    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+    "NERD ICON
+    Plug 'ryanoasis/vim-devicons'
 
 
     call plug#end()
