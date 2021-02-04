@@ -1,5 +1,8 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
+"clipboard 
+set clipboard=unnamedplus 
+
 "Color Scheme
 colorscheme dracula
 
@@ -25,7 +28,8 @@ highlight CursorLineNR cterm=bold
 "smartcase and mouse activate
 set ignorecase
 set smartcase 
-set mouse=a
+
+"set mouse=a
 
 "Set Undofile
 set undofile
