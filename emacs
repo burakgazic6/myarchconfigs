@@ -1,28 +1,24 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;;MY EMACS CONFIGS
+;;I AM USING THATS PLUGINS -> dracula-theme emmet-mode helm autopair auto-complete js2-mode lua-mode
+
 (package-initialize)
 
-;;MELPA INITIALIZE
+;MELPA INITIALIZE
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-;;REMOVE WELCOME BUFFER
-(setq inhibit-startup-screen t)
-(menu-bar-mode 0);;REMOVE MENUBAR
-(tool-bar-mode 0);;REMOVE TOOLBAR
-(toggle-scroll-bar 0);;REMOVE  SCROLLBAR
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (gruber-darker)))
+ '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("7923541211298e4fd1db76c388b1d2cb10f6a5c853c3da9b9c46a02b7f78c882" default)))
- '(package-selected-packages (quote (gruber-darker-theme emmet-mode))))
+    ("fe1c13d75398b1c8fd7fdd1241a55c286b86c3e4ce513c4292d01383de152cb7" default)))
+ '(package-selected-packages
+   (quote
+    (0blayout logview lua-mode lsp-mode js2-mode auto-complete emmet-mode helm dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -30,13 +26,15 @@
  ;; If there is more than one, they won't work right.
  )
 
+;;REMOVE WELCOME BUFFER
+(setq inhibit-startup-screen t)
+(menu-bar-mode 0);;REMOVE MENUBAR
+(tool-bar-mode 0);;REMOVE TOOLBAR
+(toggle-scroll-bar 0);;REMOVE  SCROLLBAR
+
 (defun xah-new-empty-buffer ()
   "Create a new empty buffer.
-New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, etc.
-
-It returns the buffer (for elisp programing).
-
-URL `http://ergoemacs.org/emacs/emacs_new_empty_buffer.html'
+New buffer will be named “untitled” or “untitled<2>”, “untitled<3>”, 
 Version 2017-11-01"
   (interactive)
   (let (($buf (generate-new-buffer "untitled")))
@@ -70,3 +68,14 @@ Version 2017-11-01"
   (let ((my-linum-current-line-number (line-number-at-pos)))
     ad-do-it))
 (ad-activate 'linum-update)
+
+(global-set-key (kbd "C-x C-f") 'helm-find-files) ;;file finder
+(global-set-key (kbd "M-x") 'helm-M-x) ;;COMMAND MODE
+(global-set-key (kbd "C-< x") 'helm-mini) ;;HELPER  ASSISTANT
+
+(ac-config-default) ;; ACTIVE AUTOCOMPLETE MODE
+(autopair-global-mode)
+(global-linum-mode)
+
+(set-frame-parameter (selected-frame) 'alpha '(85 50))
+(add-to-list 'default-frame-alist '(alpha 85 50))
